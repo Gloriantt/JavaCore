@@ -44,9 +44,7 @@ public class CustomLinkedList <T>{
         return current;
     }
 
-    /**
-     * Проверка корректности индекса для операций чтения/удаления
-     */
+
     private void checkIndex(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException(
@@ -55,16 +53,7 @@ public class CustomLinkedList <T>{
         }
     }
 
-    /**
-     * Проверка корректности индекса для операции добавления
-     */
-    private void checkIndexForAdd(int index) {
-        if (index < 0 || index > size) {
-            throw new IndexOutOfBoundsException(
-                    String.format("Index: %d, Size: %d", index, size)
-            );
-        }
-    }
+
 
     public void add(int index,T element){
         if(index==0){
