@@ -52,8 +52,7 @@ public class CustomLinkedList <T>{
             );
         }
     }
-
-
+    
 
     public void add(int index,T element){
         if(index==0){
