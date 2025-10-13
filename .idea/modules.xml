@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CustomLinkedList/CustomLinkedList.iml" filepath="$PROJECT_DIR$/CustomLinkedList/CustomLinkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaCore.iml" filepath="$PROJECT_DIR$/JavaCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Skynet/Skynet.iml" filepath="$PROJECT_DIR$/Skynet/Skynet.iml" />
     </modules>
   </component>
 </project>
