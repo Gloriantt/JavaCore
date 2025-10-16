@@ -1,37 +1,53 @@
-package Main;
+package Main.java.org;
 
-public class CustomLinkedList <T>{
+public class CustomLinkedList<T> {
+
+    public class Node<T> {
+        T data;
+        Node<T> next;
+
+        public Node(T data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
     private Node<T> head;
     private Node<T> tail;
     private int size;
-    public CustomLinkedList(){
-        this.head=null;
-        this.tail=null;
-        this.size=0;
+
+    public CustomLinkedList() {
+        this.head = null;
+        this.tail = null;
+        this.size = 0;
     }
-    public int size(){
+
+    public int size() {
         return size;
     }
+
     public boolean isEmpty() {
         return size == 0;
     }
-    public void addFirst(T element){
-        Node<T> newNode= new Node<>(element);
-        if(isEmpty()){
-            head=tail=newNode;
-        }else{
-            newNode.next=head;
-            head=newNode;
+
+    public void addFirst(T element) {
+        Node<T> newNode = new Node<>(element);
+        if (isEmpty()) {
+            head = tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
         }
         size++;
     }
-    public void addLast(T element){
+
+    public void addLast(T element) {
         Node<T> newNode = new Node<>(element);
-        if(isEmpty()){
-            head=tail=newNode;
-        }else{
-            tail.next=newNode;
-            tail=newNode;
+        if (isEmpty()) {
+            head = tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
         }
         size++;
     }
@@ -54,14 +70,14 @@ public class CustomLinkedList <T>{
     }
 
 
-    public void add(int index,T element){
-        if(index==0){
+    public void add(int index, T element) {
+        if (index == 0) {
             addFirst(element);
         } else if (index == size) {
             addLast(element);
-        }else{
+        } else {
             Node<T> newNode = new Node<>(element);
-            Node<T> previous =getNodeAt(index -1);
+            Node<T> previous = getNodeAt(index - 1);
             newNode.next = previous.next;
             previous.next = newNode;
             size++;
@@ -74,12 +90,14 @@ public class CustomLinkedList <T>{
         }
         return head.data;
     }
+
     public T getLast() {
         if (isEmpty()) {
             throw new IndexOutOfBoundsException("List is empty");
         }
         return tail.data;
     }
+
     public T get(int index) {
         checkIndex(index);
         return getNodeAt(index).data;
@@ -99,6 +117,7 @@ public class CustomLinkedList <T>{
 
         return removedData;
     }
+
     public T removeLast() {
         if (isEmpty()) {
             throw new IndexOutOfBoundsException("List is empty");
@@ -115,6 +134,7 @@ public class CustomLinkedList <T>{
 
         return removedData;
     }
+
     public T remove(int index) {
         checkIndex(index);
         if (index == 0) {
