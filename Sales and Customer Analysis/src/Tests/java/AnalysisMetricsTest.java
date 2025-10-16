@@ -1,6 +1,6 @@
-package Tests;
+package Tests.java;
 
-import Main.*;
+import Main.java.org.*;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;

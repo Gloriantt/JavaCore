@@ -1,4 +1,4 @@
-package Main;
+package Main.java.org;
 
 public class OrderItem {
     private String productName;
