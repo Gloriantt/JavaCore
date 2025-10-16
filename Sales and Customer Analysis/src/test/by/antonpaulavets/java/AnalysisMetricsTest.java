@@ -3,14 +3,11 @@ package by.antonpaulavets.java;
 
 import by.antonpaulavets.*;
 import org.junit.jupiter.api.Test;
-import src.*;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -28,19 +25,7 @@ class AnalysisMetricsTest {
         OrderItem item5 = new OrderItem("Shoes", 1, 80.0, Category.CLOTHING);
         OrderItem item6 = new OrderItem("Laptop", 1, 1200.0, Category.ELECTRONICS);
 
-        List<Order> orders = Arrays.asList(
-                new Order("101", LocalDateTime.now().minusDays(2), customer1, Arrays.asList(item1, item2), OrderStatus.DELIVERED),
-                new Order("102", LocalDateTime.now().minusDays(1), customer2, List.of(item3), OrderStatus.SHIPPED),
-                new Order("103", LocalDateTime.now(), customer1, Arrays.asList(item4, item5), OrderStatus.DELIVERED),
-                new Order("104", LocalDateTime.now(), customer1, Arrays.asList(item6), OrderStatus.DELIVERED),
-                new Order("105", LocalDateTime.now(), customer2, List.of(item3), OrderStatus.DELIVERED),
-                new Order("106", LocalDateTime.now(), customer2, List.of(item3), OrderStatus.CANCELLED),
-                new Order("107", LocalDateTime.now(), customer2, List.of(item3), OrderStatus.DELIVERED),
-                new Order("108", LocalDateTime.now(), customer2, List.of(item3), OrderStatus.DELIVERED),
-                new Order("109", LocalDateTime.now(), customer2, List.of(item3), OrderStatus.DELIVERED),
-                new Order("110", LocalDateTime.now(), customer2, List.of(item3), OrderStatus.DELIVERED),
-                new Order("111", LocalDateTime.now(), customer2, List.of(item3), OrderStatus.DELIVERED)
-        );
+        List<Order> orders = Arrays.asList(new Order("101", LocalDateTime.now().minusDays(2), customer1, Arrays.asList(item1, item2), OrderStatus.DELIVERED), new Order("102", LocalDateTime.now().minusDays(1), customer2, List.of(item3), OrderStatus.SHIPPED), new Order("103", LocalDateTime.now(), customer1, Arrays.asList(item4, item5), OrderStatus.DELIVERED), new Order("104", LocalDateTime.now(), customer1, Arrays.asList(item6), OrderStatus.DELIVERED), new Order("105", LocalDateTime.now(), customer2, List.of(item3), OrderStatus.DELIVERED), new Order("106", LocalDateTime.now(), customer2, List.of(item3), OrderStatus.CANCELLED), new Order("107", LocalDateTime.now(), customer2, List.of(item3), OrderStatus.DELIVERED), new Order("108", LocalDateTime.now(), customer2, List.of(item3), OrderStatus.DELIVERED), new Order("109", LocalDateTime.now(), customer2, List.of(item3), OrderStatus.DELIVERED), new Order("110", LocalDateTime.now(), customer2, List.of(item3), OrderStatus.DELIVERED), new Order("111", LocalDateTime.now(), customer2, List.of(item3), OrderStatus.DELIVERED));
         AnalysisMetrics analysis = new AnalysisMetrics();
         Set<String> uniqueCities = analysis.getUniqueCities(orders);
         assertEquals(2, uniqueCities.size());
@@ -55,9 +40,7 @@ class AnalysisMetricsTest {
         OrderItem item2 = new OrderItem("Product B", 1, 20.0, Category.ELECTRONICS);
         Customer customer1 = new Customer("1", "Anton Paulavets", "Anton.Paulavets@gmail.com", LocalDateTime.now().minusYears(2), 30, "Minsk");
 
-        List<Order> orders = Arrays.asList(
-                new Order("1", LocalDateTime.now(), customer1, List.of(item1, item2), OrderStatus.DELIVERED),
-                new Order("2", LocalDateTime.now(), customer1, List.of(item1), OrderStatus.CANCELLED) // Should not be included
+        List<Order> orders = Arrays.asList(new Order("1", LocalDateTime.now(), customer1, List.of(item1, item2), OrderStatus.DELIVERED), new Order("2", LocalDateTime.now(), customer1, List.of(item1), OrderStatus.CANCELLED) // Should not be included
         );
 
         double totalIncome = orderAnalysis.getTotalIncomeForCompletedOrders(orders);
@@ -72,10 +55,7 @@ class AnalysisMetricsTest {
         OrderItem item3 = new OrderItem("Product A", 3, 10.0, Category.BOOKS); // More sales for Product A
         Customer customer1 = new Customer("1", "Anton Paulavets", "Anton.Paulavets@gmail.com", LocalDateTime.now().minusYears(2), 30, "Minsk");
 
-        List<Order> orders = Arrays.asList(
-                new Order("1", LocalDateTime.now(), customer1, List.of(item1, item2), OrderStatus.DELIVERED),
-                new Order("2", LocalDateTime.now(), customer1, List.of(item3), OrderStatus.DELIVERED)
-        );
+        List<Order> orders = Arrays.asList(new Order("1", LocalDateTime.now(), customer1, List.of(item1, item2), OrderStatus.DELIVERED), new Order("2", LocalDateTime.now(), customer1, List.of(item3), OrderStatus.DELIVERED));
 
         String mostPopularProduct = orderAnalysis.getMostPopularProductBySales(orders);
         assertEquals("Product A", mostPopularProduct);
@@ -89,8 +69,7 @@ class AnalysisMetricsTest {
         OrderItem item3 = new OrderItem("Product C", 1, 5.0, Category.HOME);
         Customer customer1 = new Customer("1", "Anton Paulavets", "Anton.Paulavets@gmail.com", LocalDateTime.now().minusYears(2), 30, "Minsk");
 
-        List<Order> orders = Arrays.asList(
-                new Order("1", LocalDateTime.now(), customer1, List.of(item1, item2), OrderStatus.DELIVERED), // 40.0
+        List<Order> orders = Arrays.asList(new Order("1", LocalDateTime.now(), customer1, List.of(item1, item2), OrderStatus.DELIVERED), // 40.0
                 new Order("2", LocalDateTime.now(), customer1, List.of(item3), OrderStatus.DELIVERED),    // 5.0
                 new Order("3", LocalDateTime.now(), customer1, List.of(item1), OrderStatus.CANCELLED)  // Should not be included
         );

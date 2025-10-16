@@ -1,4 +1,4 @@
-package Main.java.org;
+package org.antonpaulavets.linkedlistcustom;
 
 public class Main {
     public static void main(String[] args) {

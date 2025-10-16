@@ -13,15 +13,7 @@ public class OrderItem {
         this.category = category;
     }
 
-    @Override
-    public String toString() {
-        return "by.antonpaulavets.OrderItem{" +
-                "productName='" + productName + '\'' +
-                ", quantity=" + quantity +
-                ", price=" + price +
-                ", category=" + category +
-                '}';
-    }
+
 
     public String getProductName() {
         return productName;
@@ -53,5 +45,14 @@ public class OrderItem {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+    @Override
+    public String toString() {
+        return "by.antonpaulavets.OrderItem{" +
+                "productName='" + productName + '\'' +
+                ", quantity=" + quantity +
+                ", price=" + price +
+                ", category=" + category +
+                '}';
     }
 }

@@ -1,4 +1,4 @@
-package main.java;
+package by.antonpaulavets.skynet;
 import java.util.*;
 import java.util.concurrent.*;
 

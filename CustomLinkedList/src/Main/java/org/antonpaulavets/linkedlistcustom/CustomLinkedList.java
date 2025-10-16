@@ -1,4 +1,4 @@
-package Main.java.org;
+package org.antonpaulavets.linkedlistcustom;
 
 public class CustomLinkedList<T> {
 

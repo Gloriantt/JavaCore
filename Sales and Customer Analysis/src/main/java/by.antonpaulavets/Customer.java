@@ -19,17 +19,6 @@ public class Customer {
         this.city = city;
     }
 
-    @Override
-    public String toString() {
-        return "by.antonpaulavets.Customer{" +
-                "customerId='" + customerId + '\'' +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", registeredAt=" + registeredAt +
-                ", age=" + age +
-                ", city='" + city + '\'' +
-                '}';
-    }
 
     public String getCustomerId() {
         return customerId;
@@ -78,4 +67,16 @@ public class Customer {
     public void setCity(String city) {
         this.city = city;
     }
+    @Override
+    public String toString() {
+        return "by.antonpaulavets.Customer{" +
+                "customerId='" + customerId + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", registeredAt=" + registeredAt +
+                ", age=" + age +
+                ", city='" + city + '\'' +
+                '}';
+    }
+
 }

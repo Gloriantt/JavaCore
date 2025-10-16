@@ -1,6 +1,6 @@
 package Tests.java;
 
-import Main.java.org.CustomLinkedList;
+import org.antonpaulavets.linkedlistcustom.CustomLinkedList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;

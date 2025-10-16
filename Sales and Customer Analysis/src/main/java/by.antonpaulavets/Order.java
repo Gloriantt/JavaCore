@@ -18,16 +18,7 @@ public class Order {
         this.status = status;
     }
 
-    @Override
-    public String toString() {
-        return "by.antonpaulavets.Order{" +
-                "orderId='" + orderId + '\'' +
-                ", orderDate=" + orderDate +
-                ", customer=" + customer +
-                ", items=" + items +
-                ", status=" + status +
-                '}';
-    }
+
 
     public String getOrderId() {
         return orderId;
@@ -67,5 +58,15 @@ public class Order {
 
     public void setStatus(OrderStatus status) {
         this.status = status;
+    }
+    @Override
+    public String toString() {
+        return "by.antonpaulavets.Order{" +
+                "orderId='" + orderId + '\'' +
+                ", orderDate=" + orderDate +
+                ", customer=" + customer +
+                ", items=" + items +
+                ", status=" + status +
+                '}';
     }
 }
