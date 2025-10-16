@@ -1,4 +1,4 @@
-package Main;
+package src.Main.by.antonpaulavets.java;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;

@@ -1,7 +1,8 @@
-package Tests;
+package src.test.by.antonpaulavets.java;
 
-import Main.*;
+
 import org.junit.jupiter.api.Test;
+import src.Main.by.antonpaulavets.java.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package Main;
+package src.Main.by.antonpaulavets.java;
 
 public class OrderItem {
     private String productName;
