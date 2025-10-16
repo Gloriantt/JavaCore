@@ -1,4 +1,4 @@
-package src.Main.by.antonpaulavets.java;
+package by.antonpaulavets;
 
 public class OrderItem {
     private String productName;
@@ -15,7 +15,7 @@ public class OrderItem {
 
     @Override
     public String toString() {
-        return "OrderItem{" +
+        return "by.antonpaulavets.OrderItem{" +
                 "productName='" + productName + '\'' +
                 ", quantity=" + quantity +
                 ", price=" + price +

@@ -1,4 +1,4 @@
-package src.Main.by.antonpaulavets.java;
+package by.antonpaulavets;
 
 import java.util.List;
 import java.util.Map;

@@ -1,8 +1,9 @@
-package src.test.by.antonpaulavets.java;
+package by.antonpaulavets.java;
 
 
+import by.antonpaulavets.*;
 import org.junit.jupiter.api.Test;
-import src.Main.by.antonpaulavets.java.*;
+import src.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -105,12 +106,12 @@ class AnalysisMetricsTest {
         Customer customer2 = new Customer("2", "Dana Serses", "Dana.Serses@gmail.com", LocalDateTime.now().minusYears(1), 25, "Gomel");
 
         List<Order> orders = new ArrayList<>();
-        // Customer 1 has 6 orders
+        // by.antonpaulavets.Customer 1 has 6 orders
         for (int i = 0; i < 6; i++) {
             orders.add(new Order(String.valueOf(i), LocalDateTime.now(), customer1, List.of(), OrderStatus.DELIVERED));
         }
 
-        // Customer 2 has 3 orders
+        // by.antonpaulavets.Customer 2 has 3 orders
         for (int i = 0; i < 3; i++) {
             orders.add(new Order(String.valueOf(i), LocalDateTime.now(), customer2, List.of(), OrderStatus.DELIVERED));
         }

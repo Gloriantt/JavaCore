@@ -1,4 +1,4 @@
-package src.Main.by.antonpaulavets.java;
+package by.antonpaulavets;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -20,7 +20,7 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order{" +
+        return "by.antonpaulavets.Order{" +
                 "orderId='" + orderId + '\'' +
                 ", orderDate=" + orderDate +
                 ", customer=" + customer +

@@ -3,7 +3,12 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/CustomLinkedList/src/Main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CustomLinkedList/src/Tests/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/Sales and Customer Analysis" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Sales and Customer Analysis/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Sales and Customer Analysis/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Skynet/src/main/java" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

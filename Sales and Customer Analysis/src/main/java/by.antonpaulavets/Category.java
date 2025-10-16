@@ -1,4 +1,4 @@
-package src.Main.by.antonpaulavets.java;
+package by.antonpaulavets;
 
 public enum Category {
     ELECTRONICS, CLOTHING, BOOKS, HOME, BEAUTY, TOYS
